@@ -1,21 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
+import useCounter from '../../Hooks/useCounter';
 
 const Counter1 = () => {
 
-    const [counter, setCounter] = useState(0)
-
-//increment function
-
-const increment = ()=>{
-    setCounter(counter+1)
-}
-
-//decrement function
-
-const decrement = ()=>{
-    setCounter(counter-1)
-}
-
+const [counter, increment, decrement, dismes]=  useCounter(10)
 
     return (
         <div >
@@ -28,7 +16,7 @@ const decrement = ()=>{
           <br></br>
          
          <button
-         onClick={()=>setCounter(0)}
+         onClick={dismes}
          className='btn ml-16'>dismes</button>
          
         </div>
